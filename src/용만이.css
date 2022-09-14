@@ -1,0 +1,7 @@
+.용만이{
+	width: 200px; height: 200px;overflow:hidden; border-radius: 100px;border: 7px solid black;
+	position:relative;
+}
+.용만이.on {border-color: blue;}
+.용만이 .용만이사진{width: 200px; height: 200px;object-fit: cover;}
+.용만이 .용만이사진 + .떡사진{width: 70px;position: absolute; right: 40px; bottom: 20px;}

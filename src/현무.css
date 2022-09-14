@@ -1,0 +1,5 @@
+.nickname{margin:0;}
+.현무{
+	width: 100px; height: 100px;overflow:hidden; border-radius: 100px;border: 3px solid gray;
+}
+.현무 .현무사진{width:100px;height:100px;}
