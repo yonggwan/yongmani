@@ -13,6 +13,14 @@ function App() {
   }, 100), []);
 
   const 외치기 = 용만이이름 => console.log(용만이이름);
+
+  const fn현무의정답 = useCallback(() => {
+    외치기(떡먹은용만이);
+  }, [떡먹은용만이]);
+  
+  const fn무무의정답 = useCallback(debounce(() => {
+    외치기(떡먹은용만이);
+  }, 2000), [떡먹은용만이]);
   
   useEffect(() => {
     // const timer = setInterval(onIncrese, 1000);
@@ -36,11 +44,11 @@ function App() {
       <ul style={{ display: 'flex', textAlign: 'center', margin: '100px auto auto' }}>
         <li>
           <현무 별명="현무" />
-          <button onClick={() => 외치기(떡먹은용만이)}>정답 외치기</button>
+          <button onClick={fn현무의정답}>정답 외치기</button>
         </li>
         <li>
-          <현무 별명="debounce현무" />
-          <button onClick={() => 외치기(떡먹은용만이, 1000)}>정답 외치기</button>
+          <현무 별명="정답을 너무많이 외쳐서 debounce된 무무" />
+          <button onClick={fn무무의정답}>정답 외치기</button>
         </li>
       </ul>
 
