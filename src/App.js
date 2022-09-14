@@ -12,14 +12,14 @@ function App() {
     console.log('떡먹은용만이: ', 떡먹은용만이);
   }, 100), []);
 
-  const 외치기 = 용만이이름 => console.log(용만이이름);
+  const 외치기 = (현무이름, 정답) => console.log(`${현무이름}曰: ${정답}`);
 
   const fn현무의정답 = useCallback(() => {
-    외치기(떡먹은용만이);
+    외치기('현무', 떡먹은용만이);
   }, [떡먹은용만이]);
 
   const fn무무의정답 = useCallback(debounce(() => {
-    외치기(떡먹은용만이);
+    외치기('무무', 떡먹은용만이);
   }, 2000), [떡먹은용만이]);
   
   return (
