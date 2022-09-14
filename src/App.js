@@ -17,16 +17,11 @@ function App() {
   const fn현무의정답 = useCallback(() => {
     외치기(떡먹은용만이);
   }, [떡먹은용만이]);
-  
+
   const fn무무의정답 = useCallback(debounce(() => {
     외치기(떡먹은용만이);
   }, 2000), [떡먹은용만이]);
   
-  useEffect(() => {
-    // const timer = setInterval(onIncrese, 1000);
-    // return () => clearInterval(timer);
-  }, []);
-
   return (
     <div className="App">
       
